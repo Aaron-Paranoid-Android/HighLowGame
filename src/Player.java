@@ -4,7 +4,8 @@
  * @author Aaron Ford and Abel Thomas
  * @version 2.0
  * @link https://github.com/Aaron-Paranoid-Android/HighLowGame
- */public class Player {
+ */
+public class Player {
     private int highestAttempts;
     private int id;
     private static int lastNumber;
@@ -33,14 +34,14 @@ this.name = name;
     }// returns player name
 
 
-    public void setName(String name){
+public void setName(String name){
     if(name== "") {
         throw  java.lang.exception;
         System.out.Println("Invalid name! Name cannot be blank");
     }
     else {
         this.name = name;
-    }
+}//sets name to user input, throws exception if name is blank
 
 
 }// sets player name to user input, throws exception if the name is blank
