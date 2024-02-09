@@ -6,7 +6,10 @@ public class Player {
     private java.lang.String name;
     private int wins;
 public Player(){
-
+    System.out.println("Default constructor");
+    this.id = ++lastNumber.id;
+    this.HighestAttempts = 0;
+    this.name = "Unknown";
 }
 
 public Player(java.lang.String name){
