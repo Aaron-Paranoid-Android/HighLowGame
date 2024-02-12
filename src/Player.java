@@ -3,14 +3,16 @@
  *
  * @author Aaron Ford and Abel Thomas
  * @version 2.0
- * @link https://github.com/Aaron-Paranoid-Android/HighLowGame
+ * @link <https://github.com/Aaron-Paranoid-Android/HighLowGame>
  */
+
+
 public class Player {
     private int highestAttempts;
     private int id;
     private static int lastNumber;
     private int lowestAttempts;
-    private java.lang.String name;
+    private String name;
     private int wins;
 public Player(){
     this.id = ++Player.lastNumber;
@@ -35,9 +37,9 @@ this.name = name;
 
 
 public void setName(String name){
-    if(name== "") {
+    if(name == "") {
         throw  java.lang.exception;
-        System.out.Println("Invalid name! Name cannot be blank");
+        System.out.println("Invalid name! Name cannot be blank");
     }
     else {
         this.name = name;
@@ -69,7 +71,13 @@ public int getWins(){
 }//returns number of wins
 
 public void setAttempts(int attempts){
+    if(attempts > highestAttempts){
+        highestAttempts = attempts;
+    }
+else if (attempts < lowestAttempts || attempts== 0 ) {
+    attempts = lowestAttempts;
 
+    }
 }//sets the number of attempts/guesses
 
 }//end Player class
