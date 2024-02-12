@@ -3,7 +3,7 @@
  *
  * @author Aaron Ford and Abel Thomas
  * @version 2.0
- * @link <https://github.com/Aaron-Paranoid-Android/HighLowGame>
+ * @link <<a href="https://github.com/Aaron-Paranoid-Android/HighLowGame">Github repository</a>>
  */
 
 
@@ -36,10 +36,10 @@ this.name = name;
     }// returns player name
 
 
-public void setName(String name){
+public void setName(String name) throws Exception {
+    name = name.trim();
     if(name == "") {
-        throw  java.lang.exception;
-        System.out.println("Invalid name! Name cannot be blank");
+        throw new Exception("Invalid name! Name cannot be null.");
     }
     else {
         this.name = name;
