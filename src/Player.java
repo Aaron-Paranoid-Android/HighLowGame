@@ -6,7 +6,7 @@
  * @link <<a href="https://github.com/Aaron-Paranoid-Android/HighLowGame">Github repository</a>>
  */
 
-
+import java.util.Random;
 public class Player {
     private int highestAttempts;
     private int id;
@@ -79,6 +79,11 @@ else if (attempts < lowestAttempts || attempts== 0 ) {
 
     }
 }//sets the number of attempts/guesses
+    public int getId (){
+    Random rand = new Random();
+    int id = rand.nextInt(1000);
+    return id;
+    }
 
 }//end Player class
 
