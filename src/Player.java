@@ -1,5 +1,5 @@
 /**
- * Represents an Invoice Calculator.
+ * Player class that manages the players in the high-low game.
  *
  * @author Aaron Ford and Abel Thomas
  * @version 2.0
@@ -8,12 +8,12 @@
 
 import java.util.Random;
 public class Player {
-    private int highestAttempts;
-    private int id;
-    private static int lastNumber;
-    private int lowestAttempts;
-    private String name;
-    private int wins;
+    private int highestAttempts; //variable holding the highest number of attempts
+    private int id; //randomly generated id for each player
+    private static int lastNumber; //holds the last number
+    private int lowestAttempts; //variable holding the lowest number of attempts
+    private String name; //names for each player, can be default or user input
+    private int wins; //increments the amount of wins
 public Player(){
     this.id = ++Player.lastNumber;
     this.name = "Unknown";
@@ -49,7 +49,7 @@ public void setName(String name) throws Exception {
 }// sets player name to user input, throws exception if the name is blank
 
 public void addWin(){
-    wins += 1;
+    wins ++;
 }// adds 1 for every win
 
 public int getHighestAttempts(){
